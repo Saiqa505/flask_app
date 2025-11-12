@@ -2,17 +2,21 @@ import numpy as np
 import streamlit as st
 import pickle
 
+# Load the model
 model = pickle.load(open("model.pkl", "rb"))
 
+# Set page configuration
 st.set_page_config(
     page_title="Flower Class Prediction",
     page_icon="🌸",
     layout="centered"
 )
 
+# Title
 st.title("🌸 Flower Class Prediction")
 st.write("Enter the flower measurements to predict the species")
 
+# Create input fields
 col1, col2 = st.columns(2)
 
 with col1:
@@ -53,15 +57,25 @@ with col2:
         format="%.1f"
     )
 
+# Predict button
 if st.button("🔮 Predict Flower Species", type="primary"):
     try:
+        # Create feature array
         features = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
+        
+        # Make prediction
         prediction = model.predict(features)[0]
+        
+        # Display result
         st.success(f"**The Flower Species is: {prediction}**")
-        st.balloons()
+        
+        # Add some visual feedback
+        st.snow()
+        
     except Exception as e:
         st.error(f"Error occurred: {e}")
 
+# Add information section
 with st.expander("ℹ️ About this App"):
     st.write("""
     This application uses a Random Forest Classifier trained on the Iris dataset 
