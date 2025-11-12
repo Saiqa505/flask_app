@@ -68,5 +68,13 @@ with st.expander("ℹ️ About this App"):
     to predict flower species based on their measurements.
     
     **Features:**
-    - Sepal Length: L
-
+    - Sepal Length: Length of the sepal in centimeters
+    - Sepal Width: Width of the sepal in centimeters
+    - Petal Length: Length of the petal in centimeters
+    - Petal Width: Width of the petal in centimeters
+    
+    **Possible Species:**
+    - Setosa
+    - Versicolor
+    - Virginica
+    """)
