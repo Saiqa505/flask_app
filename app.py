@@ -19,7 +19,7 @@ with col1:
     sepal_length = st.number_input(
         "Sepal Length (cm)",
         min_value=0.0,
-        max_value=10.0,
+        max_value=100.0,
         value=5.0,
         step=0.1,
         format="%.1f"
@@ -28,7 +28,7 @@ with col1:
     petal_length = st.number_input(
         "Petal Length (cm)",
         min_value=0.0,
-        max_value=10.0,
+        max_value=100.0,
         value=3.0,
         step=0.1,
         format="%.1f"
@@ -38,7 +38,7 @@ with col2:
     sepal_width = st.number_input(
         "Sepal Width (cm)",
         min_value=0.0,
-        max_value=10.0,
+        max_value=100.0,
         value=3.0,
         step=0.1,
         format="%.1f"
@@ -47,7 +47,7 @@ with col2:
     petal_width = st.number_input(
         "Petal Width (cm)",
         min_value=0.0,
-        max_value=10.0,
+        max_value=100.0,
         value=1.0,
         step=0.1,
         format="%.1f"
